@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGBlu</title>
+    <link rel="stylesheet" href="css/siteProjeto.css">
+    <script src="Script/Script_Log.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<body>
+    <header class="max">
+        
+        <a href="siteProjeto.html"><img src="img/VGblu1.png" class="logo"></a>
+        <nav>
+        <ul class="headNomes">
+            
+            <li class="btn login"><a onclick="document.getElementById('login').style.display='block'" style="width:auto;" class="log">Login</a></li>
+            <li class="btn registro"><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="reg">Registro</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#informacoes">Informações</a></li>
+            <li><a href="#sobreNos">Sobre nós</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="perfilSite.html" class="TirarPerfil" id="Perfil">Perfil</a></li>
+            <li><div class="search-box">
+              <input class="search-txt" type="text" name="" placeholder="Faça a sua pesquisa">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+              </a>
+              
+            </div></li>
+        </ul>
+    </nav>
+    </header>
+    <!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="img/carroEstacionado1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="img/carroEstacionado2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="img/carroEstacionado3editada.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="img/carroEstacionado4.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="img/proj1.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="img/proj2.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="img/proj3.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="img/proj4.jpg" style="width:100%">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="img/proj1.jpg" onclick="currentSlide(1)" alt="ale1">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/proj2.jpg" onclick="currentSlide(2)" alt="ale2">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/proj3.jpg" onclick="currentSlide(3)" alt="ale3">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/proj4.jpg" onclick="currentSlide(4)" alt="ale4">
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Fechar">&times;</span>
+  <div id="main-container">
+    <h1>Cadastre-se para acessar o sistema</h1>
+    <form id="register-form" action="">
+      <div class="full-box">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
+      </div>
+      <div class="half-box spacing">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required data-min-length="3" data-max-length="16">
+      </div>
+      <div class="half-box">
+          <label for="lastname">Sobrenome</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome" data-required data-only-letters>
+      </div>
+      <div class="half-box spacing">
+        <label for="lastname">Senha</label>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha" data-password-validate data-required>
+      </div>
+      <div class="half-box">
+        <label for="passconfirmation">Confirmação de senha</label>
+        <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
+      </div>
+      <div class="half-box spacing">
+        <label for="modeloVeiculo">Modelo do veículo</label>
+        <input type="text" name="modeloVeiculo" id="modeloVeiculo" placeholder="Digite o modelo veículo">
+      </div>
+      <div class="half-box">
+        <label for="placaDoVeiculo">Placa do veículo</label>
+        <input type="text" name="placaDoVeiculo" id="placaDoVeiculo" placeholder="Digite a placa do veículo">
+      </div>
+      <div class="half-box spacing">
+        <label for="anoDoVeiculo">Ano do veículo</label>
+        <input type="number" name="anoDoVeiculo" id="anoDoVeiculo" placeholder="Digite o ano do veículo"><br>
+      </div>
+      <div>
+        <input type="checkbox" name="agreement" id="agreement" class="termos">
+        <label for="agreement" id="agreement-label">Eu li e aceito os <a href="">termos de uso</a></label>
+      </div>
+      <div class="full-box">
+        <input id="btn-submit" type="submit" value="Registrar">
+      </div>
+    </form>
+  </div>
+  </div>
+  <!--Login-->
+<div id="login" class="modal">
+  <span onclick="document.getElementById('login').style.display='none'" class="close" title="Fechar">&times;</span>
+  <div id="main-container">
+    <h1>Login</h1>
+    <form id="register-form">
+        <div class="full-box">
+            <label for="email spacing">E-mail</label>
+            <div class="input-icons">
+              <i class="fa fa-user icon"></i>
+            <input class="input-field" type="email" name="email" id="email" placeholder="     Digite o seu e-mail" data-min-length="3">
+        </div>
+        <div class="full-box">
+            <label for="password spacing">Senha</label>
+            <div class="input-icons">
+              <i class="fa fa-user fa-lock"></i>
+            <input class="input-field" type="password" name="password" id="password" placeholder="     Digite a sua senha">
+        </div>
+        <div class="full-box">
+            <label>Ainda não possui uma <a  onclick="document.getElementById('id01').style.display='block',document.getElementById('login').style.display='none'"    style="width:auto;">conta</a></label>
+        </div>
+        <br>
+        <div class="full-box">
+            <label>Continuar sem <a onclick="document.getElementById('login').style.display='none'" class=".close">conta</a></label>
+        </div>
+        <br>
+        <div class="full-box">
+            <input type="submit" id="btn-submit" value="Login">
+        </div>
+    </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+
+    
+</body>
+<main>
+    <section id="home" class="home"><p class="textoHome">Em busca de uma melhora área azul do Brasil!</section>
+
+    <section id="informacoes" class="info"><h2>Informações</h2><br>
+      <p>A VGblu trabalha com o sistema de vagas gratuítas, onde que o único requesito é fazer o cadastro do propretário e do veículo.</p><br>
+      <p>Tempo de uso da sua área azul: 1 hora por veículo.</p><br>
+      <p>Posso deixar meu carro mais de 1 hora na mesma vaga?</p>
+      <p>Não, você terá que esperar 3 minutos para poder usar o nosso programa com o veículo que já foi usado.</p><br>
+      <p>Eu posso registar mais de 1 veículo?</p>
+      <p>Você pode. Pois nosso trabalho é facilitar o estacionamento em Blumenau.</p><br><br>
+      <p>Para mais informções acesse nossos <a href="#contatos">Contatos!</a></p>
+
+    </section>
+    
+    <section id="sobreNos" class="sobrenos"><p>
+            A VGblu é um site onde você pode procurar vagas para estacionar seu veículo em Blumenau e região. Começando agora no mercado promete fazer você não gastar muito do seu tempo procurando 
+      vagas para deixar seu veículo,é apenas entrar o site selecionar a vaga e levar seu veículo ao local desejado.
+    </p></section>
+    <section id="contatos" class="contatosdeg"><h2>Contatos</h2><br><br>
+      <div class="wrapper">
+        <div class="button">
+           <div class="icons">
+              <i class="fab fa-facebook-f"></i>
+           </div>
+           <span>Facebook</span>
+        </div>
+        <div class="button">
+           <div class="icons">
+              <i class="fab fa-twitter"></i>
+           </div>
+           <span>Twitter</span>
+        </div>
+        <div class="button">
+           <div class="icons">
+              <i class="fab fa-instagram"></i>
+           </div>
+           <span>Instagram</span>
+        </div>
+          <div class="button">
+            <div class="icons">
+               <i class="fa fa-envelope"></i>
+            </div>
+            <span>E-mail</span>
+            </div>
+            
+            
+            
+    </section>
+</main>
+</html>

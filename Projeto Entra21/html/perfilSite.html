@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/perfilProjeto.css">
+</head>
+<body>     
+        <img src="img/foto_perfil.jpg">
+        <h1>Perfil</h1>
+        <form id="fundoperfil"action="" method="GET" class="idade">
+            <table>
+              <tr>
+                <td><label for="nmPessoa"><strong>Nome:</strong></label></td>
+                <td><input type="text" id="nmPessoa" name="nmPessoa" size="30" maxlength="20"></td>
+              </tr>  
+            <tr>
+                <td><label for="sbPessoa"><strong>Sobrenome:</strong></label></td>
+                <td><input type="text" nm="sbPessoa" size="30" maxlength="20" class="sbPessoa"> </td>
+            </tr>
+            <tr>
+                <td><label for="idade"><strong>Idade:</strong></label></td>
+                <td><input type="number" name="idade" min="10" max="50"></td>
+            </tr>
+            
+            
+            <tr>
+                
+                <td><strong>Sexo:</strong></td>
+                <td><label  for="flAceita"><strong>Masculino</strong></label>
+                <input type="radio" id="flAceita" name="flAceita" value="S">
+
+                <label for="flAceita"><strong>Feminino</strong></label>
+                <input type="radio" id="flAceita" name="flAceita" value="S"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="eMail"><strong>E-mail:</strong></label></td>
+                <td><input type="email" name="eEMail" size="30"></td>
+            </tr>
+            <tr>
+                <td><label for="CPF"><strong>CPF:</strong></label></td>
+               <td><input type="text" name="CPF" size="10"></td>
+            </tr>
+            <tr>
+                <td><label for="modelo"><strong>Modelo do veículo:</strong></label></td>
+                <td><input type="text" name="modelo"></td>
+            </tr>
+
+            <tr>
+                <td><label for="placa"><strong>Placa do veículo:</strong></label></td>
+                <td><input type="text" name="placa" size="20"></td>
+            </tr>
+            <tr>
+                <td><label for="cor"><strong>Cor do veículo:</strong></label></td>
+                <td><input type="text" name="cor" size="20"></td>
+            </tr>
+            <tr>
+                <td><label for="qrCode"><strong>QRcode:</strong></label></td>
+            </tr>
+            
+        </table>    
+        </form>
+        <a href="siteProjeto.html"><button class="button">Voltar</button></a>
+        <a href="editarPerfil.html"><button class="button">Editar Perfil</button></a>
+        
+
+
+</body>
+</html>
